@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://comawbucprupm"]
+[gd_scene load_steps=5 format=3 uid="uid://comawbucprupm"]
 
 [ext_resource type="FontFile" uid="uid://cb3wck8lmfih1" path="res://Resources/PressStart2P.ttf" id="1_8yglt"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_ecjtr"]
+[ext_resource type="Texture2D" uid="uid://br6ad5nh4w52u" path="res://icon.svg" id="3_7k8uv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_efu5a"]
 font = ExtResource("1_8yglt")
@@ -54,6 +55,11 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 56
 text = "Quit"
+
+[node name="Robots" type="TextureRect" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_7k8uv")
+stretch_mode = 1
 
 [connection signal="pressed" from="CanvasLayer/BoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/BoxContainer/InstructionsButton" to="." method="_on_instructions_button_pressed"]
