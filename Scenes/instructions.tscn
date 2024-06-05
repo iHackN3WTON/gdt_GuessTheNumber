@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxv1605dvc0fd"]
+
+[ext_resource type="Script" path="res://Scripts/instructions.gd" id="1_t143b"]
+[ext_resource type="FontFile" uid="uid://cb3wck8lmfih1" path="res://Resources/PressStart2P.ttf" id="2_nfilp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_08wgf"]
+font = ExtResource("2_nfilp")
+font_size = 24
+
+[node name="Instructions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t143b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+vertical = true
+
+[node name="InstructionsLabel" type="Label" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+text = "Instructions:
+
+The computer will think of 
+a number and you must 
+try to guess that number, 
+after each attempt the 
+computer will tell you 
+if your number is the
+correct or if it is very high
+or very low. Professional 
+players  can guess the
+number in eight tries or
+less.
+
+"
+label_settings = SubResource("LabelSettings_08wgf")
+
+[node name="BackButton" type="Button" parent="CanvasLayer/BoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 56
+text = "Back
+"
+
+[connection signal="pressed" from="CanvasLayer/BoxContainer/BackButton" to="." method="_on_back_button_pressed"]

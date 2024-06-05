@@ -1,0 +1,245 @@
+[gd_scene load_steps=7 format=3 uid="uid://bp4v35g4u08sy"]
+
+[ext_resource type="Script" path="res://Scripts/main_game.gd" id="1_0f50a"]
+[ext_resource type="FontFile" uid="uid://cb3wck8lmfih1" path="res://Resources/PressStart2P.ttf" id="1_4b68f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f2qh5"]
+font = ExtResource("1_4b68f")
+font_size = 36
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_44e4t"]
+font = ExtResource("1_4b68f")
+font_size = 26
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xkup8"]
+font = ExtResource("1_4b68f")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xm452"]
+font = ExtResource("1_4b68f")
+font_size = 55
+font_color = Color(0, 0, 0, 1)
+outline_size = 20
+
+[node name="MainGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0f50a")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 259.0
+offset_top = -321.0
+offset_right = -251.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayAgainButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = 341.0
+offset_right = 2.0
+offset_bottom = 481.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "
+Play Again!
+
+"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -192.0
+offset_top = 17.0
+offset_right = -19.0
+offset_bottom = 69.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 31
+text = "Return to Menu"
+
+[node name="ReturnButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = 485.0
+offset_right = 2.0
+offset_bottom = 625.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "
+Return to Menu
+
+"
+
+[node name="GuessButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 230.0
+offset_top = -85.0
+offset_right = -195.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 85
+text = "Guess"
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -421.0
+offset_right = 2.0
+offset_bottom = -385.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Guess the Number!"
+label_settings = SubResource("LabelSettings_f2qh5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RangeLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -370.0
+offset_bottom = -334.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Guess the Number!"
+label_settings = SubResource("LabelSettings_44e4t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = 188.0
+offset_right = 3.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_xkup8")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = 256.0
+offset_right = -4.0
+offset_bottom = 335.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_4b68f")
+theme_override_font_sizes/normal_font_size = 27
+text = "You're quite slow, I will decrease range to "
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -489.0
+offset_right = 2.0
+offset_bottom = -453.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_xkup8")
+vertical_alignment = 1
+
+[node name="MaxScoreLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -539.0
+offset_right = 2.0
+offset_bottom = -503.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_xkup8")
+vertical_alignment = 1
+
+[node name="GuessText" type="TextEdit" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 17.0
+offset_top = -166.0
+offset_right = -9.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4b68f")
+theme_override_font_sizes/font_size = 36
+placeholder_text = "Enter your guess..."
+
+[node name="SecretNumberLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 5.0
+offset_top = -279.0
+offset_right = 5.0
+offset_bottom = -224.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "??"
+label_settings = SubResource("LabelSettings_xm452")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="GuessButton" to="." method="_on_guess_button_pressed"]
